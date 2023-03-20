@@ -14,22 +14,50 @@
 	{#await team}
 		<div>loading</div>
 	{:then team}
-		{#each team.items as item}
-			<img src={getImageURL(item.collectionId, item.id, item.image)} alt={item.name} />
-			<div>
-				{#if item.title}
+		<h1>Internes Team</h1>
+		<flex-row>
+			{#each team.items as item}
+				{#if item.intern}
 					<div>
-						<h3>{item.title} {item.name}</h3>
-						<h4>{item.role}</h4>
-					</div>
-				{:else}
-					<div>
-						<h3>{item.name}</h3>
-						<h4>{item.role}</h4>
+						<div>
+							<img
+								style="width:200px; height:200px; object-fit: cover"
+								src={getImageURL(item.collectionId, item.id, item.image)}
+								alt={item.name} />
+							<div>
+								<h3>{item.name}</h3>
+								<h4>{item.role}</h4>
+								<p>mail:{item.email}</p>
+								<p>phone: {item.phone}</p>
+								<p>hp: {item.homepage}</p>
+							</div>
+						</div>
 					</div>
 				{/if}
-			</div>
-		{/each}
+			{/each}
+		</flex-row>
+		<h1>Externes Team</h1>
+		<flex-row>
+			{#each team.items as item}
+				{#if !item.intern}
+					<div>
+						<div>
+							<img
+								style="width:200px; height:200px;object-fit: cover"
+								src={getImageURL(item.collectionId, item.id, item.image)}
+								alt={item.name} />
+						</div>
+						<div>
+							<h3>{item.name}</h3>
+							<h4>{item.role}</h4>
+							<p>mail:{item.email}</p>
+							<p>phone: {item.phone}</p>
+							<p>hp: {item.homepage}</p>
+						</div>
+					</div>
+				{/if}
+			{/each}
+		</flex-row>
 	{/await}
 </content-container>
 
@@ -41,5 +69,14 @@
 		align-items: center;
 		padding-left: 10rem;
 		padding-right: 10rem;
+	}
+
+	p {
+		font-size: 0.8rem;
+		margin: 0;
+	}
+
+	flex-row {
+		gap: 2.5rem;
 	}
 </style>
