@@ -17,7 +17,7 @@
 						item.id,
 						item.background_image
 					)}')" />
-				<div style="padding: 2.5rem">
+				<div style="padding: 2.5rem; justify-content:stretch;height:100%">
 					<h3>{item.title}</h3>
 					<p>{item.description.slice(0, 300)}...</p>
 					<a style="font-weight:bold;color:var({item.color})" href={`/categories/${item.slug}`}

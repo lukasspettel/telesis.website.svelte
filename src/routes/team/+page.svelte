@@ -14,7 +14,7 @@
 	})
 </script>
 
-<content-container>
+<content-container style="padding-bottom:5rem">
 	{#await pages}
 		<div>Loading...</div>
 	{:then pages}
@@ -38,16 +38,16 @@
 						<flex-row>
 							<div>
 								<img
-									style="object-fit: cover"
+									style="object-fit: cover; width: 100%;height: 300px;"
 									src={getImageURL(item.collectionId, item.id, item.image)}
 									alt={item.name} />
 							</div>
 							<div>
 								<h3>{item.name}</h3>
 								<h4>{item.role}</h4>
-								<p>mail:{item.email}</p>
-								<p>phone: {item.phone}</p>
-								<p>hp: {item.homepage}</p>
+								<p>{item.email}</p>
+								<p>{item.phone}</p>
+								<p>{item.homepage}</p>
 							</div>
 						</flex-row>
 					</item>
@@ -62,16 +62,16 @@
 						<flex-row>
 							<div>
 								<img
-									style="object-fit: cover"
+									style="object-fit: cover; width: 100%;height: 100%;"
 									src={getImageURL(item.collectionId, item.id, item.image)}
 									alt={item.name} />
 							</div>
 							<div>
 								<h3>{item.name}</h3>
 								<h4>{item.role}</h4>
-								<p>mail:{item.email}</p>
-								<p>phone: {item.phone}</p>
-								<p>hp: {item.homepage}</p>
+								<p>{item.email}</p>
+								<p>{item.phone}</p>
+								<p>{item.homepage}</p>
 							</div>
 						</flex-row>
 					</item>
@@ -116,5 +116,12 @@
 	}
 	img {
 		border-radius: var(--element-border-radius);
+	}
+
+	h3 {
+		margin: 0;
+	}
+	h4 {
+		margin: 0;
 	}
 </style>

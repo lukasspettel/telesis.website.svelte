@@ -11,7 +11,7 @@
 		sort: '-date'
 	})
 
-	const projects = $pbStore.collection('projects').getList(1, 6, {
+	const projects = $pbStore.collection('projects').getList(1, 3, {
 		sort: '-date',
 		expand: 'category, company'
 	})
