@@ -1,6 +1,7 @@
 <script>
 	import { pbStore, Record } from 'svelte-pocketbase'
 	import { page } from '$app/stores'
+	import bgImage from '$lib/assets/images/background/Topographic Map Patterns_4.svg'
 
 	const pages = $pbStore.collection('pages').getList(1, 10, {
 		sort: '-created'

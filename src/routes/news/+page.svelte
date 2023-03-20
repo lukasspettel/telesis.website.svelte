@@ -4,8 +4,12 @@
 	import Time from 'svelte-time'
 	import { page } from '$app/stores'
 	import News from '$lib/components/Sections/News.svelte'
+	import bgImage from '$lib/assets/images/background/Topographic Map Patterns_5.svg'
 
 	const news = $pbStore.collection('news').getList(1, 250, {
+		sort: '-created'
+	})
+	const pages = $pbStore.collection('pages').getList(1, 10, {
 		sort: '-created'
 	})
 
@@ -13,10 +17,22 @@
 </script>
 
 <content-container>
+	<h1>Updates & News</h1>
+	<background style="background-image: url('{bgImage}')" />
+	{#await pages}
+		<div>Loading...</div>
+	{:then pages}
+		{#each pages.items as item}
+			{#if `/${item.slug}` === $page.route.id}
+				<richtext-container>
+					{@html item.body}
+				</richtext-container>
+			{/if}
+		{/each}
+	{/await}
 	{#await news}
 		<div>Loading...</div>
 	{:then news}
-		<h1>Updates & News</h1>
 		<News {news} {newsItemWidth} />
 	{/await}
 </content-container>

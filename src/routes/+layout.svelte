@@ -34,7 +34,7 @@
 	}
 
 	:global(p) {
-		font-size: 1.5rem;
+		font-size: 1rem;
 		font-family: 'Inter';
 	}
 	:global(h1) {
@@ -47,6 +47,12 @@
 		font-family: 'Urbanist';
 	}
 	:global(h4) {
+		font-family: 'Urbanist';
+	}
+	:global(h5) {
+		font-family: 'Urbanist';
+	}
+	:global(h6) {
 		font-family: 'Urbanist';
 	}
 	:global(background) {

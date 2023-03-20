@@ -3,14 +3,34 @@
 	import { getImageURL } from '$lib/utils/getURL'
 	import Time from 'svelte-time'
 	import { page } from '$app/stores'
+	import bgImage from '$lib/assets/images/background/Topographic Map Patterns_4.svg'
 
 	const team = $pbStore.collection('team').getList(1, 250, {
 		sort: '-created',
 		expand: 'companies'
 	})
+
+	const pages = $pbStore.collection('pages').getList(1, 10, {
+		sort: '-created'
+	})
 </script>
 
 <content-container>
+	<background style="background-image: url('{bgImage}')" />
+	{#await pages}
+		<div>Loading...</div>
+	{:then pages}
+		{#each pages.items as item}
+			{#if `/${item.slug}` === $page.route.id}
+				<h1>
+					<div>Projects</div>
+				</h1>
+				<richtext-container>
+					{@html item.body}
+				</richtext-container>
+			{/if}
+		{/each}
+	{/await}
 	{#await team}
 		<div>loading</div>
 	{:then team}
