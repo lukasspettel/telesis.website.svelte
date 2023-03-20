@@ -21,9 +21,7 @@
 	{:then pages}
 		{#each pages.items as item}
 			{#if `/${item.slug}` === $page.route.id}
-				<h1>
-					<div>Projects</div>
-				</h1>
+				<h1>Projects</h1>
 				<richtext-container>
 					{@html item.body}
 				</richtext-container>

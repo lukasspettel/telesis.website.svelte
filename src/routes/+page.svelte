@@ -27,6 +27,7 @@
 	const categoryItemWidth = '45%'
 	const newsItemWidth = '30%'
 	const projectItemWidth = '100%'
+	const collaborationItemWidth = '10%'
 </script>
 
 <content-container>
@@ -36,7 +37,7 @@
 				style="padding-bottom: 2rem; width: 500px;"
 				src={record.logo ? getImageURL(record.collectionId, record.id, record.logo) : '/'}
 				alt={record.title} />
-			<h2>{record.subheadline}</h2>
+			<h2 style="white-space: nowrap;">{record.subheadline}</h2>
 		</hero>
 	</Record>
 
@@ -77,7 +78,7 @@
 	{#await companies}
 		<div>loading</div>
 	{:then companies}
-		<Companies {companies} />
+		<Companies {companies} {collaborationItemWidth} />
 	{/await}
 </content-container>
 

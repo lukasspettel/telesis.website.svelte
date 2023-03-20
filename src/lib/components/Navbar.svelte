@@ -5,12 +5,12 @@
 <div>
 	<nav>
 		<ul>
-			<a href="/"><img src={logo} alt="Telesis Logo" /></a>
+			<a href="/"><img class="img-override" src={logo} alt="Telesis Logo" /></a>
 		</ul>
 		<ul>
 			<li><a href="/categories">Categories</a></li>
-			<li><a href="/projects">Projects</a></li>
 			<li><a href="/news">News</a></li>
+			<li><a href="/projects">Projects</a></li>
 			<li><a href="/collaborations">Collaboration</a></li>
 			<li><a href="/team">Team</a></li>
 			<li><a href="/contact">Contact</a></li>
@@ -34,5 +34,6 @@
 		font-family: 'urbanist';
 		color: var(--black-suite);
 		text-decoration: none;
+		font-size: 0.8rem;
 	}
 </style>

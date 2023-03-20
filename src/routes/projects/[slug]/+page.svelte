@@ -39,15 +39,6 @@
 {/await}
 
 <style>
-	content-container {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding-left: 10rem;
-		padding-right: 10rem;
-	}
-
 	img {
 		object-fit: cover;
 		width: 100vw;

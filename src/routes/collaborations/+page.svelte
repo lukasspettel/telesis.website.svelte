@@ -8,26 +8,41 @@
 	const companies = $pbStore.collection('companies').getList(1, 250, {
 		sort: '-created'
 	})
+	const pages = $pbStore.collection('pages').getList(1, 10, {
+		sort: '-created'
+	})
 
-	let itemWidth = '25%'
+	let collaborationItemWidth = '25%'
 </script>
 
 <content-container>
+	{#await pages}
+		<div>Loading...</div>
+	{:then pages}
+		{#each pages.items as item}
+			{#if `/${item.slug}` === $page.route.id}
+				<h1>Collaboration & Partners</h1>
+				<div>
+					{@html item.body}
+				</div>
+			{/if}
+		{/each}
+	{/await}
 	{#await companies}
 		<div>loading</div>
 	{:then companies}
-		<Companies {companies} {itemWidth} />
+		<Companies {companies} {collaborationItemWidth} />
 	{/await}
 </content-container>
 
 <style>
-	content-container {
+	h1 {
 		padding-top: 5rem;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding-left: 10rem;
-		padding-right: 10rem;
+		font-size: 4rem;
+		margin-bottom: 0rem;
+	}
+	flex-row {
+		justify-content: space-between;
+		align-items: flex-end;
 	}
 </style>

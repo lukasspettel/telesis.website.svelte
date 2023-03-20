@@ -9,14 +9,12 @@
 	{#each projects.items as item}
 		<item style=" background-color: rgba(255, 255, 255, 0.5);">
 			<div>
-				<flex-row
-					><a href={`/projects/${item.slug}`}><h2 style="margin:0rem">{item.title}</h2></a>
-					<a href={`/categories/${item.expand.category.slug}`}
-						><h4 style="font-size: 1rem; color: var({item.expand.category.color});margin:0rem">
-							{item.expand.category.title}
-						</h4></a>
-					<Time timestamp={item.date} />
-				</flex-row>
+				<a href={`/projects/${item.slug}`}><h2 style="margin:0rem">{item.title}</h2></a>
+				<a href={`/categories/${item.expand.category.slug}`}
+					><h4 style="font-size: 1rem; color: var({item.expand.category.color});margin:0rem">
+						{item.expand.category.title}
+					</h4></a>
+				<Time timestamp={item.date} />
 				<flex-row style="gap:2rem">
 					<img src={getImageURL(item.collectionId, item.id, item.image)} />
 				</flex-row>

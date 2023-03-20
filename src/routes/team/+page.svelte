@@ -20,9 +20,7 @@
 	{:then pages}
 		{#each pages.items as item}
 			{#if `/${item.slug}` === $page.route.id}
-				<h1>
-					<div>Projects</div>
-				</h1>
+				<h1>Telesis Team</h1>
 				<richtext-container>
 					{@html item.body}
 				</richtext-container>
@@ -32,7 +30,7 @@
 	{#await team}
 		<div>loading</div>
 	{:then team}
-		<h1>Internes Team</h1>
+		<h2>Interne</h2>
 		<team-flex>
 			{#each team.items as item}
 				{#if item.intern}
@@ -56,7 +54,7 @@
 				{/if}
 			{/each}
 		</team-flex>
-		<h1>Externes Team</h1>
+		<h2>Externe</h2>
 		<team-flex>
 			{#each team.items as item}
 				{#if !item.intern}
@@ -84,15 +82,6 @@
 </content-container>
 
 <style>
-	content-container {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding-left: 10rem;
-		padding-right: 10rem;
-	}
-
 	team-flex {
 		display: flex;
 		flex-wrap: wrap;
@@ -100,10 +89,11 @@
 	}
 
 	team-flex item {
-		width: 48%;
+		width: 40%;
 		height: 100%;
 		align-items: flex-start;
 		justify-content: flex-start;
+		flex-grow: 1;
 		white-space: wrap;
 		border-radius: var(--element-border-radius);
 	}
@@ -113,9 +103,18 @@
 		margin: 0;
 	}
 
+	h1 {
+		padding-top: 5rem;
+		font-size: 4rem;
+		margin-bottom: 0rem;
+	}
+
 	flex-row {
 		align-items: flex-start;
 		justify-content: flex-start;
 		gap: 2.5rem;
+	}
+	img {
+		border-radius: var(--element-border-radius);
 	}
 </style>

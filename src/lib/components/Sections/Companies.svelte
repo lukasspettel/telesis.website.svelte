@@ -1,14 +1,17 @@
 <script>
 	import { getImageURL } from '$lib/utils/getURL'
 	export let companies
-	export let itemWidth
+	export let collaborationItemWidth
 </script>
 
-<companies-flex {companies} style="--item-width: {itemWidth}">
+<companies-flex {companies} style="--item-width: {collaborationItemWidth}">
 	{#each companies.items as item}
 		<item>
 			<a href={`${item.homepage}`}
-				><img src={getImageURL(item.collectionId, item.id, item.logo)} alt={item.title} /></a>
+				><img
+					class="img-override"
+					src={getImageURL(item.collectionId, item.id, item.logo)}
+					alt={item.title} /></a>
 		</item>
 	{/each}
 </companies-flex>
