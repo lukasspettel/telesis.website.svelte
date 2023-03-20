@@ -2,16 +2,16 @@
 	import Footer from '$lib/components/Footer.svelte'
 	import { pbStore } from 'svelte-pocketbase'
 	import Navbar from '$lib/components/Navbar.svelte'
+	import bgImage from '$lib/assets/images/background/Topographic Map Patterns.svg'
 
 	pbStore.set('http://127.0.0.1:8090/')
 </script>
 
+<background style="background-image: url('{bgImage}')" />
 <Navbar />
-
 <div>
 	<slot />
 </div>
-
 <Footer />
 
 <style global>
@@ -55,8 +55,8 @@
 	:global(h6) {
 		font-family: 'Urbanist';
 	}
-	:global(background) {
-		opacity: 0.15;
+	background {
+		opacity: 0.05;
 		width: 100%;
 		height: 100%;
 		z-index: -3;
@@ -86,5 +86,8 @@
 		flex: 1;
 		justify-content: space-between;
 		align-items: baseline;
+	}
+	:global(img) {
+		border-radius: var(--element-border-radius);
 	}
 </style>

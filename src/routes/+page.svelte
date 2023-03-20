@@ -6,7 +6,6 @@
 	import Category from '$lib/components/Sections/Category.svelte'
 	import Projects from '$lib/components/Sections/Projects.svelte'
 	import Companies from '$lib/components/Sections/Companies.svelte'
-	import bgImage from '$lib/assets/images/background/Topographic Map Patterns.svg'
 
 	const news = $pbStore.collection('news').getList(1, 6, {
 		sort: '-date'
@@ -26,15 +25,15 @@
 	})
 
 	const categoryItemWidth = '45%'
-	const newsItemWidth = '20%'
+	const newsItemWidth = '30%'
+	const projectItemWidth = '100%'
 </script>
 
 <content-container>
 	<Record collection="users" id="hm269p75apytq3g" let:record>
-		<background style="background-image: url('{bgImage}')" />
 		<hero>
 			<img
-				style="padding-bottom: 2rem; width: 800px;"
+				style="padding-bottom: 2rem; width: 500px;"
 				src={record.logo ? getImageURL(record.collectionId, record.id, record.logo) : '/'}
 				alt={record.title} />
 			<h2>{record.subheadline}</h2>
@@ -68,7 +67,7 @@
 	{#await projects}
 		<div>loading</div>
 	{:then projects}
-		<Projects {projects} />
+		<Projects {projects} {projectItemWidth} />
 	{/await}
 
 	<flex-row style="gap: 1rem"
@@ -85,8 +84,7 @@
 <style>
 	hero {
 		margin: auto;
-		padding-top: 5rem;
-		padding-bottom: 5rem;
+		padding: 10rem;
 		width: 100%;
 		display: flex;
 		flex-direction: column;
@@ -102,7 +100,7 @@
 		margin-bottom: 0rem;
 	}
 	h2 {
-		font-size: 3rem;
+		font-size: 1.8rem;
 		margin-bottom: 0rem;
 	}
 </style>

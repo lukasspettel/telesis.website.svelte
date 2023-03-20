@@ -42,6 +42,7 @@
 
 	category-flex item {
 		width: var(--item-width);
+		height: 100%;
 		flex-grow: 1;
 		white-space: wrap;
 		border-radius: var(--element-border-radius);

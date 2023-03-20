@@ -4,7 +4,6 @@
 	import Time from 'svelte-time'
 	import { page } from '$app/stores'
 	import News from '$lib/components/Sections/News.svelte'
-	import bgImage from '$lib/assets/images/background/Topographic Map Patterns_5.svg'
 
 	const news = $pbStore.collection('news').getList(1, 250, {
 		sort: '-created'
@@ -18,7 +17,6 @@
 
 <content-container>
 	<h1>Updates & News</h1>
-	<background style="background-image: url('{bgImage}')" />
 	{#await pages}
 		<div>Loading...</div>
 	{:then pages}

@@ -3,11 +3,13 @@
 	import { getImageURL } from '$lib/utils/getURL'
 	import Time from 'svelte-time'
 	import { page } from '$app/stores'
+	import Projects from '$lib/components/Pagination/Projects.svelte'
 
 	const projects = $pbStore.collection('projects').getList(1, 250, {
 		sort: '-created',
 		expand: 'companies, category'
 	})
+	let projectItemWidth = '25%'
 </script>
 
 {#await projects}
@@ -30,6 +32,7 @@
 				<div>
 					{@html item.body}
 				</div>
+				<Projects {projects} {projectItemWidth} category={item.expand.category.title} />
 			</content-container>
 		{/if}
 	{/each}

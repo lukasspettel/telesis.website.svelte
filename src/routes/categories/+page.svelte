@@ -4,7 +4,6 @@
 	import Time from 'svelte-time'
 	import { page } from '$app/stores'
 	import Category from '$lib/components/Sections/Category.svelte'
-	import bgImage from '$lib/assets/images/background/Topographic Map Patterns_4.svg'
 
 	const categories = $pbStore.collection('categories').getList(1, 250, {
 		sort: '-created'
