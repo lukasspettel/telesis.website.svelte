@@ -5,7 +5,7 @@
 <div>
 	<nav>
 		<ul>
-			<a href="/"><img src={logo} /></a>
+			<a href="/"><img src={logo} alt="Telesis Logo" /></a>
 		</ul>
 		<ul>
 			<li><a href="/categories">Categories</a></li>

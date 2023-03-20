@@ -10,7 +10,6 @@
 </script>
 
 <content-container>
-	<background style="background-image: url('{bgImage}')" />
 	{#await categories}
 		<div>Loading...</div>
 	{:then categories}

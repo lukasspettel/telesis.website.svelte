@@ -12,11 +12,10 @@
 		sort: '-created'
 	})
 
-	const itemWidth = '100%'
+	const categoryItemWidth = '100%'
 </script>
 
 <content-container>
-	<background style="background-image: url('{bgImage}')" />
 	{#await pages}
 		<div>Loading...</div>
 	{:then pages}
@@ -34,7 +33,7 @@
 	{#await categories}
 		<div>Loading...</div>
 	{:then category}
-		<Category {category} {itemWidth} />
+		<Category {category} {categoryItemWidth} />
 	{/await}
 </content-container>
 
