@@ -8,26 +8,23 @@
 <category-flex {category} style="--item-width: {categoryItemWidth}">
 	{#each category.items as item}
 		<item>
-			<div style="position:relative; border-radius: var(--element-border-radius);">
+			<a href={`/categories/${item.slug}`}>
 				<div
-					style="border-radius: var(--element-border-radius);z-index:-2;width: 100%; height: 100%; position: absolute; background-color: var(--white-cuba);" />
-				<div
-					style="opacity: 0.15; width: 100%; height: 100%; z-index:-1; position:absolute; padding: 2rem; background-size: cover; background-image: url('{getImageURL(
-						item.collectionId,
-						item.id,
-						item.background_image
-					)}')" />
-				<div style="padding: 2.5rem; justify-content:stretch;height:100%">
-					<h3>{item.title}</h3>
-					<p>{item.description.slice(0, 300)}...</p>
-					<a style="font-weight:bold;color:var({item.color})" href={`/categories/${item.slug}`}
-						>Read more...</a>
+					style="position:relative; border-radius: var(--element-border-radius); border-right:5px solid var({item.color}); border-bottom:5px solid var({item.color})">
+					<div
+						style="border-radius: var(--element-border-radius);z-index:-2;width: 100%; height: 100%; position: absolute; background-color: white;" />
+					<div
+						style="opacity: 0.1; width: 100%; height: 100%; z-index:-1; position:absolute; padding: 2rem; background-size: cover; background-image: url('{getImageURL(
+							item.collectionId,
+							item.id,
+							item.background_image
+						)}')" />
+					<div style="padding: 2.5rem; justify-content:stretch;height:100%">
+						<h1 style="color:var({item.color})">{item.title}</h1>
+						<p>{item.description.slice(0, 300)}...</p>
+					</div>
 				</div>
-			</div>
-			<!-- <img
-						src={getImageURL(item.collectionId, item.id, item.background_image)}
-						alt={item.title}
-					/> -->
+			</a>
 		</item>
 	{/each}
 </category-flex>
@@ -51,5 +48,12 @@
 	category-flex item p {
 		font-size: 1rem;
 		color: var(--black-suite);
+	}
+
+	a {
+		text-decoration: none;
+	}
+	h1 {
+		font-size: 2rem;
 	}
 </style>
