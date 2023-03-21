@@ -26,7 +26,7 @@
 		--grey-london: #464242;
 		--orange-biz: #ec681d;
 		--purple-sience: #694f66;
-		--yellow-insurance: #798333;
+		--yellow-insurance: #27b784;
 		--green-school: #96b9a1;
 		--red-minus: #ac3b51;
 

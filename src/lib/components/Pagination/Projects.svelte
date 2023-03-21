@@ -9,14 +9,22 @@
 <project-flex {projects} style="--item-width: {projectItemWidth}" {category}>
 	{#each projects.items as item}
 		{#if category === item.expand.category.title}
-			<item style=" background-color: rgba(255, 255, 255, 0.5);">
+			<item
+				style=" background-color: rgba(255, 255, 255, 0.5); border-left:5px solid var({item.expand
+					.category.color}); padding-left: 2rem">
 				<div>
-					<flex-row
-						><a href={`/projects/${item.slug}`}><h2 style="margin:0rem">{item.title}</h2></a>
+					<a href={`/projects/${item.slug}`}
+						><h2 style="margin:0rem; color: var({item.expand.category.color})">{item.title}</h2></a>
+					<flex-row style="padding-bottom:1rem">
+						<a href={`/categories/${item.expand.category.slug}`}
+							><h4 style="font-size: 1rem; color: var({item.expand.category.color});margin:0rem">
+								{item.expand.category.title}
+							</h4></a>
 						<Time timestamp={item.date} />
 					</flex-row>
+
 					<flex-row style="gap:2rem">
-						<img src={getImageURL(item.collectionId, item.id, item.image)} />
+						<img src={getImageURL(item.collectionId, item.id, item.image)} alt={item.title} />
 					</flex-row>
 				</div>
 			</item>
@@ -40,7 +48,6 @@
 		width: var(--item-width);
 		flex-grow: 1;
 		white-space: wrap;
-		border-radius: var(--element-border-radius);
 	}
 
 	h2 {

@@ -7,7 +7,7 @@
 	import Projects from '$lib/components/Sections/Projects.svelte'
 	import Companies from '$lib/components/Sections/Companies.svelte'
 
-	const news = $pbStore.collection('news').getList(1, 6, {
+	const news = $pbStore.collection('news').getList(1, 3, {
 		sort: '-date'
 	})
 

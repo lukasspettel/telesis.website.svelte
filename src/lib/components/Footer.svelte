@@ -12,7 +12,7 @@
 		</div>
 		<div>
 			<h6>Navigation</h6>
-			<p><a href="/categories">Categories</a></p>
+			<p><a href="/categories">Services</a></p>
 			<p><a href="/news">News</a></p>
 			<p><a href="/projects">Projects</a></p>
 			<p><a href="/collaborations">Collaboration</a></p>
@@ -35,6 +35,7 @@
 	}
 	footer {
 		padding-top: 2rem;
+		padding-bottom: 2rem;
 		padding-left: 5rem;
 		padding-right: 5rem;
 		background-color: white;
@@ -43,10 +44,13 @@
 
 	a {
 		text-decoration: none;
+		color: var(--black-suite);
+		margin: 0;
+		padding: 0;
 	}
 
 	p {
-		margin: 0.5rem;
+		margin: 0.25rem 0rem 0.25rem 0rem;
 		font-size: 0.75rem;
 	}
 	flex-row {

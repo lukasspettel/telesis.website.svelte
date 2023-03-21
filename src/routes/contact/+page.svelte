@@ -13,7 +13,7 @@
 	{:then pages}
 		{#each pages.items as item}
 			{#if `/${item.slug}` === $page.route.id}
-				<h2>{item.title}</h2>
+				<h1>{item.title}</h1>
 				<div>
 					{@html item.body}
 				</div>
@@ -21,3 +21,11 @@
 		{/each}
 	{/await}
 </content-container>
+
+<style>
+	h1 {
+		padding-top: 5rem;
+		font-size: 4rem;
+		margin-bottom: 0rem;
+	}
+</style>

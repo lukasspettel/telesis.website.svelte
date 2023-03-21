@@ -22,7 +22,7 @@
 		{#each pages.items as item}
 			{#if `/${item.slug}` === $page.route.id}
 				<h1>
-					<div>Our areas of Work</div>
+					<div>Telesis means rethinking.</div>
 				</h1>
 				<richtext-container>
 					{@html item.body}
@@ -33,7 +33,10 @@
 	{#await categories}
 		<div>Loading...</div>
 	{:then category}
-		<Category {category} {categoryItemWidth} />
+		<div style="padding-bottom: 5rem">
+			<h2>Services</h2>
+			<Category {category} {categoryItemWidth} />
+		</div>
 	{/await}
 </content-container>
 
@@ -42,5 +45,8 @@
 		padding-top: 5rem;
 		font-size: 4rem;
 		margin-bottom: 0rem;
+	}
+	h2 {
+		font-size: 3rem;
 	}
 </style>

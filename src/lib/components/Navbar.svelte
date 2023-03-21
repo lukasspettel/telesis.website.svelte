@@ -8,7 +8,7 @@
 			<a href="/"><img class="img-override" src={logo} alt="Telesis Logo" /></a>
 		</ul>
 		<ul>
-			<li><a href="/categories">Categories</a></li>
+			<li><a href="/categories">Service</a></li>
 			<li><a href="/news">News</a></li>
 			<li><a href="/projects">Projects</a></li>
 			<li><a href="/collaborations">Collaboration</a></li>
