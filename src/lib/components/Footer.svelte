@@ -6,11 +6,9 @@
 	<flex-row>
 		<div>
 			<a href="/"><img class="img-override" src={logo} alt="Telesis Logo" /></a>
-			<p>Telesis Entwicklungs- und Management GmbH</p>
-			<p>Hof 19</p>
-			<p>A-6861 Alberschwende</p>
-			<p>Tel.: +43 (0) 5579 / 4444</p>
-			<p>Email: info@telesis.at</p>
+			<p style="margin-top: 1rem">Telesis Entwicklungs- und Management GmbH</p>
+			<p>©2023 Telesis GmbH.</p>
+			<p><a href="/tearms-of-service">Tearms of Service</a></p>
 		</div>
 		<div>
 			<h6>Navigation</h6>
@@ -29,7 +27,6 @@
 			<p><a href="/collaborations">Github</a></p>
 		</div>
 	</flex-row>
-	<p>©2023 Telesis GmbH.</p>
 </footer>
 
 <style>

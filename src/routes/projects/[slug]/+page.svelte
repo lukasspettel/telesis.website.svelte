@@ -19,15 +19,13 @@
 		{#if item.slug === $page.params.slug}
 			<img src={getImageURL(item.collectionId, item.id, item.image)} alt={item.title} />
 			<content-container>
-				<div>
-					<div>
-						<flex-row>
-							<h1>{item.title}</h1>
-							<h4>{item.expand.category.title}</h4>
-							<h4><Time timestamp={item.date} /></h4>
-						</flex-row>
-						<p>{item.description}...</p>
-					</div>
+				<div style="padding-top:5rem">
+					<h1>{item.title}</h1>
+					<flex-row>
+						<h4>{item.expand.category.title}</h4>
+						<h4><Time timestamp={item.date} /></h4></flex-row>
+
+					<p>{item.description}...</p>
 				</div>
 				<div>
 					{@html item.body}
@@ -43,5 +41,9 @@
 		object-fit: cover;
 		width: 100vw;
 		height: 100vh;
+	}
+	h1 {
+		font-size: 3rem;
+		margin-bottom: 2.5rem;
 	}
 </style>
