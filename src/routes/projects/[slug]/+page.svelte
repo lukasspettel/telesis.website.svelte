@@ -22,7 +22,10 @@
 {:then projects}
 	{#each projects.items as item}
 		{#if item.slug === $page.params.slug}
-			<img src={getImageURL(item.collectionId, item.id, item.image)} alt={item.title} />
+			<img
+				class="hero-img"
+				src={getImageURL(item.collectionId, item.id, item.image)}
+				alt={item.title} />
 			<content-container>
 				<div style="padding-top:5rem; width:100%;">
 					<flex-row>
@@ -103,6 +106,10 @@
 <style>
 	img {
 		object-fit: cover;
+	}
+	.hero-img {
+		width: 100vw;
+		height: 100vh;
 	}
 	h1 {
 		font-size: 3rem;

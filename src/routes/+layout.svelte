@@ -57,7 +57,7 @@
 		font-family: 'Urbanist';
 	}
 	background {
-		opacity: 0.05;
+		opacity: 0.1;
 		width: 100%;
 		height: 100%;
 		z-index: -3;
@@ -93,5 +93,29 @@
 	}
 	:global(.img-override) {
 		border-radius: 0;
+	}
+
+	:global(a) {
+		position: relative;
+		text-decoration: none;
+		color: inherit;
+		transition: text-decoration 0.1s cubic-bezier(0.33, 0.66, 0.66, 1);
+	}
+	:global(a:hover) {
+		text-decoration: underline;
+		color: #27b784;
+	}
+
+	:global(a::befor) {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 2px;
+		bottom: 0;
+		left: 0;
+		background-color: #000;
+		transform: scaleX(0);
+		transition: transform 0.3s ease;
 	}
 </style>

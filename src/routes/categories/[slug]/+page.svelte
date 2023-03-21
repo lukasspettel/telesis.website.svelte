@@ -21,17 +21,22 @@
 	{:then categories}
 		{#each categories.items as item}
 			{#if item.slug === $page.params.slug}
-				<div>
-					<a href="/categories/"> <h1 style="color: var({item.color})">{item.title}</h1></a>
+				<div style="padding-bottom:2rem">
+					<div style="padding-bottom:3rem">
+						<a href="/categories/">
+							<h1 style="color: var({item.color});justify-content:flex-start">{item.title}</h1></a>
+					</div>
+					<div style="padding-bottom:4rem">
+						<img src={getImageURL(item.collectionId, item.id, item.image)} alt={item.title} />
+					</div>
 					<p>{item.description}</p>
-					<richtext-container>
-						{@html item.body}
-					</richtext-container>
 				</div>
 				{#await projects}
 					<div>Loading...</div>
 				{:then projects}
-					<Projects {projects} {projectItemWidth} category={item.title} />
+					<div style="padding-bottom:2rem">
+						<Projects {projects} {projectItemWidth} category={item.title} />
+					</div>
 				{/await}
 			{/if}
 		{/each}

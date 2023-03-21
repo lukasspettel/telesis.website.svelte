@@ -19,9 +19,9 @@
 							item.id,
 							item.background_image
 						)}')" />
-					<div style="padding: 2.5rem; justify-content:stretch;height:100%;">
+					<div style="padding: 2.5rem; height:100%;">
 						<h1 style="color:var({item.color})">{item.title}</h1>
-						<h6>{item.description.slice(0, 300)}...</h6>
+						<h6>{item.description.slice(0, 200)}...</h6>
 					</div>
 				</div>
 			</a>
@@ -35,9 +35,11 @@
 		display: flex;
 		flex-wrap: wrap;
 		grid-gap: 2.5rem;
+		align-items: stretch;
 	}
 
 	category-flex item {
+		align-items: center;
 		width: var(--item-width);
 		height: 100%;
 		flex-grow: 1;
@@ -55,5 +57,7 @@
 	}
 	h1 {
 		font-size: 2rem;
+		white-space: wrap;
+		margin-bottom: 0;
 	}
 </style>

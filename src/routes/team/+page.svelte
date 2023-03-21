@@ -44,10 +44,10 @@
 							</div>
 							<div>
 								<h3>{item.name}</h3>
-								<h4>{item.role}</h4>
-								<p>{item.email}</p>
-								<p>{item.phone}</p>
-								<p>{item.homepage}</p>
+								<h6>{item.role}</h6>
+								<p>+{item.phone}</p>
+								<a href={`mailto:${item.email}`}><p>{item.email}</p></a>
+								<a href={`${item.homepage}`}> <p>{item.homepage}</p></a>
 							</div>
 						</flex-row>
 					</item>
@@ -68,10 +68,10 @@
 							</div>
 							<div>
 								<h3>{item.name}</h3>
-								<h4>{item.role}</h4>
-								<p>{item.email}</p>
-								<p>{item.phone}</p>
-								<p>{item.homepage}</p>
+								<h6>{item.role}</h6>
+								<p>+{item.phone}</p>
+								<a href={`mailto:${item.email}`}><p>{item.email}</p></a>
+								<a href={`${item.homepage}`}> <p>{item.homepage}</p></a>
 							</div>
 						</flex-row>
 					</item>

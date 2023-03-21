@@ -33,8 +33,7 @@
 	{#await categories}
 		<div>Loading...</div>
 	{:then category}
-		<div style="padding-bottom: 5rem">
-			<h2>Services</h2>
+		<div style="padding-bottom: 5rem;">
 			<Category {category} {categoryItemWidth} />
 		</div>
 	{/await}
