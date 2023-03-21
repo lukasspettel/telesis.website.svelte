@@ -1,6 +1,7 @@
 <script>
 	import Time from 'svelte-time'
 	import { getImageURL } from '$lib/utils/getURL'
+
 	export let category
 	export let categoryItemWidth
 </script>
@@ -9,19 +10,18 @@
 	{#each category.items as item}
 		<item>
 			<a href={`/categories/${item.slug}`}>
-				<div
-					style="position:relative; border-radius: var(--element-border-radius); border-right:5px solid var({item.color}); border-bottom:5px solid var({item.color})">
+				<div style="position:relative; border-radius: var(--element-border-radius)">
 					<div
-						style="border-radius: var(--element-border-radius);z-index:-2;width: 100%; height: 100%; position: absolute; background-color: white;" />
+						style="border-radius: var(--element-border-radius);z-index:-2;width: 100%; height: 100%; position: absolute; background-color: var(--white-cuba);" />
 					<div
-						style="opacity: 0.1; width: 100%; height: 100%; z-index:-1; position:absolute; padding: 2rem; background-size: cover; background-image: url('{getImageURL(
+						style=" background-image: url('{getImageURL(
 							item.collectionId,
 							item.id,
 							item.background_image
 						)}')" />
-					<div style="padding: 2.5rem; justify-content:stretch;height:100%">
+					<div style="padding: 2.5rem; justify-content:stretch;height:100%;">
 						<h1 style="color:var({item.color})">{item.title}</h1>
-						<h5>{item.description.slice(0, 300)}...</h5>
+						<p>{item.description.slice(0, 300)}...</p>
 					</div>
 				</div>
 			</a>
@@ -46,7 +46,7 @@
 	}
 
 	category-flex item p {
-		font-size: 1rem;
+		font-size: 0.9rem;
 		color: var(--black-suite);
 	}
 

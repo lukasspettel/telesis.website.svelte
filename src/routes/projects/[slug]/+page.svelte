@@ -24,7 +24,7 @@
 		{#if item.slug === $page.params.slug}
 			<img src={getImageURL(item.collectionId, item.id, item.image)} alt={item.title} />
 			<content-container>
-				<div style="padding-top:5rem">
+				<div style="padding-top:5rem; width:100%">
 					<h1>{item.title}</h1>
 					<flex-row>
 						<h4>{item.expand.category.title}</h4>

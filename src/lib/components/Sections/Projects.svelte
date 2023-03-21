@@ -7,10 +7,13 @@
 
 <project-flex {projects} style="--item-width: {projectItemWidth}">
 	{#each projects.items as item}
-		<item style=" background-color: rgba(255, 255, 255, 0.5);">
+		<item
+			style=" background-color: rgba(255, 255, 255, 0.5); border-left:5px solid var({item.expand
+				.category.color}); padding-left: 2rem">
 			<div>
-				<a href={`/projects/${item.slug}`}><h2 style="margin:0rem">{item.title}</h2></a>
-				<flex-row>
+				<a href={`/projects/${item.slug}`}
+					><h2 style="margin:0rem; color: var({item.expand.category.color})">{item.title}</h2></a>
+				<flex-row style="padding-bottom:1rem">
 					<a href={`/categories/${item.expand.category.slug}`}
 						><h4 style="font-size: 1rem; color: var({item.expand.category.color});margin:0rem">
 							{item.expand.category.title}
@@ -19,11 +22,7 @@
 				</flex-row>
 
 				<flex-row style="gap:2rem">
-					<img
-						style="border-right:5px solid var({item.expand.category
-							.color}); border-bottom:5px solid var({item.expand.category
-							.color}); border-radius: var(--element-border-radius);"
-						src={getImageURL(item.collectionId, item.id, item.image)} />
+					<img src={getImageURL(item.collectionId, item.id, item.image)} alt={item.title} />
 				</flex-row>
 			</div>
 		</item>
@@ -46,7 +45,6 @@
 		width: var(--item-width);
 		flex-grow: 1;
 		white-space: wrap;
-		border-radius: var(--element-border-radius);
 	}
 
 	h2 {

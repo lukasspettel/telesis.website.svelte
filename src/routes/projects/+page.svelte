@@ -6,13 +6,14 @@
 	import Projects from '$lib/components/Sections/Projects.svelte'
 
 	const projects = $pbStore.collection('projects').getList(1, 250, {
-		sort: '-created',
+		sort: '-date',
 		expand: 'category'
 	})
 
 	const pages = $pbStore.collection('pages').getList(1, 10, {
 		sort: '-created'
 	})
+	let projectItemWidth = '100%'
 </script>
 
 <content-container>
@@ -31,7 +32,7 @@
 	{#await projects}
 		<div>Loading...</div>
 	{:then projects}
-		<Projects {projects} />
+		<Projects {projects} {projectItemWidth} />
 	{/await}
 </content-container>
 

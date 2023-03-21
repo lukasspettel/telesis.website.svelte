@@ -20,15 +20,15 @@
 
 	:root {
 		--white-cuba: #e7e8e9;
-		--black-suite: #251f1f;
+		--black-suite: #2a2735;
 		--grey-altona-100: #b9b7b7;
 		--grey-altona: #888585;
 		--grey-london: #464242;
 		--orange-biz: #ec681d;
-		--purple-sience: #7f40f1;
-		--yellow-insurance: #f1e540;
-		--green-school: #45dea0;
-		--red-minus: #bd2f47;
+		--purple-sience: #694f66;
+		--yellow-insurance: #798333;
+		--green-school: #96b9a1;
+		--red-minus: #ac3b51;
 
 		--element-border-radius: 0.5rem;
 	}

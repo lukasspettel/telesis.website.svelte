@@ -22,7 +22,7 @@
 		{#each categories.items as item}
 			{#if item.slug === $page.params.slug}
 				<div>
-					<h1>{item.title}</h1>
+					<a href="/categories/"> <h1 style="color: var({item.color})">{item.title}</h1></a>
 					<p>{item.description}</p>
 					<richtext-container>
 						{@html item.body}
@@ -43,5 +43,8 @@
 		padding-top: 5rem;
 		font-size: 4rem;
 		margin-bottom: 0rem;
+	}
+	a {
+		text-decoration: none;
 	}
 </style>
