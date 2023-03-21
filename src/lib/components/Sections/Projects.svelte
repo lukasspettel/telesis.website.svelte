@@ -20,8 +20,8 @@
 
 				<flex-row style="gap:2rem">
 					<img
-						style="border-right:2px solid var({item.expand.category
-							.color}); border-bottom:2px solid var({item.expand.category
+						style="border-right:5px solid var({item.expand.category
+							.color}); border-bottom:5px solid var({item.expand.category
 							.color}); border-radius: var(--element-border-radius);"
 						src={getImageURL(item.collectionId, item.id, item.image)} />
 				</flex-row>

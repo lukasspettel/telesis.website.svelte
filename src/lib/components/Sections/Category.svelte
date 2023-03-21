@@ -21,7 +21,7 @@
 						)}')" />
 					<div style="padding: 2.5rem; justify-content:stretch;height:100%">
 						<h1 style="color:var({item.color})">{item.title}</h1>
-						<p>{item.description.slice(0, 300)}...</p>
+						<h5>{item.description.slice(0, 300)}...</h5>
 					</div>
 				</div>
 			</a>

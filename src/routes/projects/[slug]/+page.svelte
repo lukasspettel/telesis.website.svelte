@@ -35,13 +35,13 @@
 				<div>
 					{@html item.body}
 				</div>
-				<Projects {projects} {projectItemWidth} category={item.expand.category.title} />
-				<flex-row style="gap:1rem">
-					<h1>Collaborationen</h1>
-					<a href="/collaborations/"><p style="font-size:0.75rem;">View All</p></a>
-				</flex-row>
-				<companies-flex>
-					{#if item.expand.company}
+
+				{#if item.expand.company}
+					<flex-row style="gap:1rem">
+						<h1>Collaborationen</h1>
+						<a href="/collaborations/"><p style="font-size:0.75rem;">View All</p></a>
+					</flex-row>
+					<companies-flex>
 						{#each item.expand.company as item}
 							<item>
 								<a href={`${item.homepage}`}
@@ -51,8 +51,9 @@
 										alt={item.title} /></a>
 							</item>
 						{/each}
-					{/if}
-				</companies-flex>
+					</companies-flex>
+				{/if}
+				<Projects {projects} {projectItemWidth} category={item.expand.category.title} />
 			</content-container>
 		{/if}
 	{/each}
