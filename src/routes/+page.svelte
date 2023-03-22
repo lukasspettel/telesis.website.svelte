@@ -34,7 +34,7 @@
 	<Record collection="users" id="hm269p75apytq3g" let:record>
 		<hero>
 			<img
-				style="padding-bottom: 2rem; width: 500px;"
+				style="padding-bottom: 2rem; width: 500px;height:fit-content"
 				src={record.logo ? getImageURL(record.collectionId, record.id, record.logo) : '/'}
 				alt={record.title} />
 			<h2 style="white-space: nowrap;">{record.subheadline}</h2>
@@ -50,14 +50,17 @@
 		{/await}
 	</category-flex>
 
-	<flex-row style="gap: 1rem;"><a href="/news/"><h1>Updates & News</h1></a> </flex-row>
+	<flex-row style="gap: 1rem;padding-bottom:2rem"
+		><div><a href="/news/"><h1>Updates & News</h1></a></div></flex-row>
 	{#await news}
 		<div>loading</div>
 	{:then news}
 		<News {news} {newsItemWidth} />
 	{/await}
 
-	<flex-row style="gap: 1rem"><a href="/projects/"><h1>Projects</h1></a> </flex-row>
+	<flex-row style="gap: 1rem;padding-bottom:2rem"
+		><a href="/projects/"><h1>Projects</h1></a>
+	</flex-row>
 
 	{#await projects}
 		<div>loading</div>
@@ -65,7 +68,9 @@
 		<Projects {projects} {projectItemWidth} />
 	{/await}
 
-	<flex-row style="gap: 1rem"><a href="/collaborations/"><h1>Collaborations</h1></a> </flex-row>
+	<flex-row style="gap: 1rem;padding-bottom:2rem"
+		><a href="/collaborations/"><h1>Collaborations</h1></a>
+	</flex-row>
 	{#await companies}
 		<div>loading</div>
 	{:then companies}
@@ -77,7 +82,10 @@
 	hero {
 		margin: auto;
 		padding: 10rem;
+		align-items: center;
+		justify-content: center;
 		width: 100%;
+		height: 100vh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;

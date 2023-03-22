@@ -52,9 +52,6 @@
 		color: var(--black-suite);
 	}
 
-	a {
-		text-decoration: none;
-	}
 	h1 {
 		font-size: 2rem;
 		white-space: wrap;

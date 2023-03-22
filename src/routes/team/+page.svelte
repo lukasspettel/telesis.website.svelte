@@ -38,7 +38,7 @@
 						<flex-row>
 							<div>
 								<img
-									style="object-fit: cover; width: 100%;height: 300px;"
+									style="object-fit: cover; width: 250px;height: 250px;"
 									src={getImageURL(item.collectionId, item.id, item.image)}
 									alt={item.name} />
 							</div>
@@ -62,7 +62,7 @@
 						<flex-row>
 							<div>
 								<img
-									style="object-fit: cover; width: 100%;height: 100%;"
+									style="object-fit: cover; width: 250px;height: 250px;"
 									src={getImageURL(item.collectionId, item.id, item.image)}
 									alt={item.name} />
 							</div>
@@ -86,11 +86,10 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 2.5rem;
+		padding-bottom: 2rem;
 	}
 
 	team-flex item {
-		width: 40%;
-		height: 100%;
 		align-items: flex-start;
 		justify-content: flex-start;
 		flex-grow: 1;
@@ -107,6 +106,11 @@
 		padding-top: 5rem;
 		font-size: 4rem;
 		margin-bottom: 0rem;
+	}
+
+	h2 {
+		font-size: 3rem;
+		margin-bottom: 0.5rem;
 	}
 
 	flex-row {

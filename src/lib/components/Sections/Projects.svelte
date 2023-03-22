@@ -31,10 +31,6 @@
 </project-flex>
 
 <style>
-	a {
-		text-decoration: none;
-		color: var(--black-suite);
-	}
 	project-flex {
 		padding-bottom: 2.5rem;
 		display: flex;

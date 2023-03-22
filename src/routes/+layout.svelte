@@ -39,7 +39,6 @@
 	}
 	:global(h1) {
 		font-family: 'Urbanist';
-		text-align: center;
 		margin: 0;
 	}
 	:global(h2) {
@@ -71,9 +70,9 @@
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		padding-left: 15rem;
-		padding-right: 15rem;
+		align-items: flex-start;
+		padding-left: 10rem;
+		padding-right: 10rem;
 	}
 
 	:global(richtext-container) {
