@@ -24,11 +24,11 @@
 		--grey-altona-100: #b9b7b7;
 		--grey-altona: #888585;
 		--grey-london: #464242;
-		--orange-biz: #ec681d;
-		--purple-sience: #694f66;
-		--yellow-insurance: #27b784;
-		--green-school: #96b9a1;
-		--red-minus: #ac3b51;
+		--orange-biz: #e0bbaf;
+		--purple-sience: #a2a4ec;
+		--yellow-insurance: #bbaf91;
+		--green-school: #84a7aa;
+		--red-minus: #c46a84;
 
 		--element-border-radius: 0.5rem;
 	}
@@ -40,6 +40,7 @@
 	:global(h1) {
 		font-family: 'Urbanist';
 		text-align: center;
+		margin: 0;
 	}
 	:global(h2) {
 		font-family: 'Urbanist';
@@ -89,6 +90,8 @@
 		align-items: baseline;
 	}
 	:global(img) {
+		width: 100%;
+		height: 100%;
 		border-radius: var(--element-border-radius);
 	}
 	:global(.img-override) {
@@ -96,26 +99,9 @@
 	}
 
 	:global(a) {
+		color: var(--black-suite);
 		position: relative;
 		text-decoration: none;
 		color: inherit;
-		transition: text-decoration 0.1s cubic-bezier(0.33, 0.66, 0.66, 1);
-	}
-	:global(a:hover) {
-		text-decoration: underline;
-		color: #27b784;
-	}
-
-	:global(a::befor) {
-		content: '';
-		position: absolute;
-		display: block;
-		width: 100%;
-		height: 2px;
-		bottom: 0;
-		left: 0;
-		background-color: #000;
-		transform: scaleX(0);
-		transition: transform 0.3s ease;
 	}
 </style>

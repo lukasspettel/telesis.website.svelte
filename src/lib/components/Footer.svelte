@@ -43,8 +43,6 @@
 	}
 
 	a {
-		text-decoration: none;
-		color: var(--black-suite);
 		margin: 0;
 		padding: 0;
 	}

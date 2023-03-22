@@ -50,20 +50,14 @@
 		{/await}
 	</category-flex>
 
-	<flex-row style="gap: 1rem;"
-		><h1>Updates & News</h1>
-		<a href="/news/"><p style="font-size:0.75rem;">View All</p></a>
-	</flex-row>
+	<flex-row style="gap: 1rem;"><a href="/news/"><h1>Updates & News</h1></a> </flex-row>
 	{#await news}
 		<div>loading</div>
 	{:then news}
 		<News {news} {newsItemWidth} />
 	{/await}
 
-	<flex-row style="gap: 1rem"
-		><h1>Projects</h1>
-		<a href="/projects/"><p style="font-size:0.75rem;">View All</p></a>
-	</flex-row>
+	<flex-row style="gap: 1rem"><a href="/projects/"><h1>Projects</h1></a> </flex-row>
 
 	{#await projects}
 		<div>loading</div>
@@ -71,10 +65,7 @@
 		<Projects {projects} {projectItemWidth} />
 	{/await}
 
-	<flex-row style="gap: 1rem"
-		><h1>Collaborations</h1>
-		<a href="/collaborations/"><p style="font-size:0.75rem;">View All</p></a>
-	</flex-row>
+	<flex-row style="gap: 1rem"><a href="/collaborations/"><h1>Collaborations</h1></a> </flex-row>
 	{#await companies}
 		<div>loading</div>
 	{:then companies}
@@ -90,10 +81,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-	}
-
-	a {
-		text-decoration: none;
 	}
 
 	h1 {

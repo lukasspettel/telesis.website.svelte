@@ -39,5 +39,6 @@
 		position: relative;
 		width: 260px;
 		object-fit: cover;
+		height: fit-content;
 	}
 </style>

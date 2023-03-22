@@ -91,7 +91,7 @@
 						</team-flex>
 					</div>
 				{/if}
-				<div style="padding-bottom:2rem">
+				<div style="padding-bottom:2rem;width:100%">
 					<a href={`/categories/${item.expand.category.slug}`}
 						><h3 style="color:var({item.expand.category.color})">
 							{item.expand.category.title}
@@ -150,6 +150,7 @@
 		gap: 1rem;
 	}
 	img {
+		height: fit-content;
 		border-radius: var(--element-border-radius);
 	}
 	h4 {
