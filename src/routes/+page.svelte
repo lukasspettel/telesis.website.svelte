@@ -51,7 +51,7 @@
 	</category-flex>
 
 	<flex-row style="gap: 1rem;padding-bottom:2rem"
-		><div><a href="/news/"><h1>Updates & News</h1></a></div></flex-row>
+		><a href="/news/"><h1>Updates & News</h1></a></flex-row>
 	{#await news}
 		<div>loading</div>
 	{:then news}

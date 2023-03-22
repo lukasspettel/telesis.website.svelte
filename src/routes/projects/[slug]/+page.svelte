@@ -66,10 +66,10 @@
 					</div>
 				{/if}
 				{#if item.expand.team}
+					<flex-row style="gap:1rem">
+						<a href="/team/"><h1 style="margin:0;padding:0">Team</h1></a>
+					</flex-row>
 					<div style="padding-top:1rem; padding-bottom:5rem; width:100%">
-						<flex-row style="gap:1rem;justify-content:flex-start">
-							<a href="/team/"><h1 style="margin-bottom:1rem">Team</h1></a>
-						</flex-row>
 						<div style="border-top:5px solid var({item.expand.category.color});width:100%" />
 						<team-flex style="padding-top:2rem">
 							{#each item.expand.team as item}

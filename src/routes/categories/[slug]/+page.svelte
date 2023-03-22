@@ -24,8 +24,7 @@
 			{#if item.slug === $page.params.slug}
 				<div style="padding-bottom:2rem">
 					<div style="padding-bottom:3rem">
-						<a href="/categories/">
-							<h1 style="color: var({item.color});justify-content:flex-start">{item.title}</h1></a>
+						<a href="/categories/"> <h1 style="color: var({item.color})">{item.title}</h1></a>
 					</div>
 					<div style="padding-bottom:4rem">
 						<img src={getImageURL(item.collectionId, item.id, item.image)} alt={item.title} />
@@ -33,10 +32,10 @@
 					<p>{item.description}</p>
 				</div>
 				{#if item.expand.team}
+					<flex-row style="gap:1rem;">
+						<a href="/team/"><h1 style="margin:0;padding:0">Team</h1></a>
+					</flex-row>
 					<div style="padding-top:1rem; padding-bottom:5rem; width:100%">
-						<flex-row style="gap:1rem;justify-content:flex-start">
-							<a href="/team/"><h1 style="margin-bottom:1rem">Team</h1></a>
-						</flex-row>
 						<div style="border-top:5px solid var({item.color});width:100%" />
 						<team-flex style="padding-top:2rem">
 							{#each item.expand.team as item}

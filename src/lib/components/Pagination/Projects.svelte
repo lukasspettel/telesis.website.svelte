@@ -12,22 +12,27 @@
 			<item
 				style=" background-color: rgba(255, 255, 255, 0.5); border-left:5px solid var({item.expand
 					.category.color}); padding-left: 2rem">
-				<a href={`/projects/${item.slug}`}
-					><div>
-						<h2 style="margin:0rem; color: var({item.expand.category.color})">{item.title}</h2>
-						<flex-row style="padding-bottom:1rem">
-							<a href={`/categories/${item.expand.category.slug}`}
-								><h4 style="font-size: 1rem; color: var({item.expand.category.color});margin:0rem">
-									{item.expand.category.title}
-								</h4></a>
-							<Time timestamp={item.date} />
-						</flex-row>
+				<div>
+					<flex-row>
+						<a href={`/projects/${item.slug}`}
+							><h2 style="margin:0rem; color: var({item.expand.category.color})">
+								{item.title}
+							</h2></a>
+					</flex-row>
 
-						<flex-row style="gap:2rem">
-							<img src={getImageURL(item.collectionId, item.id, item.image)} alt={item.title} />
-						</flex-row>
-					</div>
-				</a>
+					<flex-row style="padding-bottom:1rem">
+						<a href={`/categories/${item.expand.category.slug}`}
+							><h4 style="font-size: 1rem; color: var({item.expand.category.color});margin:0rem">
+								{item.expand.category.title}
+							</h4></a>
+						<Time timestamp={item.date} />
+					</flex-row>
+
+					<flex-row style="gap:2rem">
+						<a class="a-exclude" href={`/projects/${item.slug}`}>
+							<img src={getImageURL(item.collectionId, item.id, item.image)} alt={item.title} /></a>
+					</flex-row>
+				</div>
 			</item>
 		{/if}
 	{/each}
@@ -54,5 +59,10 @@
 		object-fit: cover;
 		width: 100%;
 		height: 50vh;
+	}
+	.a-exclude {
+		width: 100%;
+		height: 100%;
+		box-shadow: none;
 	}
 </style>

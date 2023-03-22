@@ -5,7 +5,7 @@
 <footer>
 	<flex-row>
 		<div>
-			<a href="/"><img class="img-override" src={logo} alt="Telesis Logo" /></a>
+			<a class="a-exclude" href="/"><img class="img-override" src={logo} alt="Telesis Logo" /></a>
 			<p style="margin-top: 1rem">Telesis Entwicklungs- und Management GmbH</p>
 			<p>©2023 Telesis GmbH.</p>
 			<p><a href="/tearms-of-service">Tearms of Service</a></p>
@@ -54,5 +54,10 @@
 	flex-row {
 		align-items: baseline;
 		justify-content: space-between;
+	}
+	.a-exclude {
+		width: 100%;
+		height: 100%;
+		box-shadow: none;
 	}
 </style>

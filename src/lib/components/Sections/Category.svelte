@@ -9,22 +9,23 @@
 <category-flex {category} style="--item-width: {categoryItemWidth}">
 	{#each category.items as item}
 		<item>
-			<a href={`/categories/${item.slug}`}>
-				<div style="position:relative; border-radius: var(--element-border-radius)">
-					<div
-						style="border-radius: var(--element-border-radius);z-index:-2;width: 100%; height: 100%; position: absolute; background-color: var(--white-cuba);" />
-					<div
-						style=" background-image: url('{getImageURL(
-							item.collectionId,
-							item.id,
-							item.background_image
-						)}')" />
-					<div style="padding: 2.5rem; height:100%;">
-						<h1 style="color:var({item.color})">{item.title}</h1>
-						<h6>{item.description.slice(0, 200)}...</h6>
-					</div>
+			<div style="position:relative; border-radius: var(--element-border-radius)">
+				<div
+					style="opacity:.75;border-radius: var(--element-border-radius);z-index:-2;width: 100%; height: 100%; position: absolute; background-color: var(--black-suite);" />
+				<div
+					style=" background-image: url('{getImageURL(
+						item.collectionId,
+						item.id,
+						item.background_image
+					)}')" />
+				<div style="padding: 2.5rem; height:100%;">
+					<flex-row>
+						<a href={`/categories/${item.slug}`}>
+							<h1 style="color:var({item.color})">{item.title}</h1></a>
+					</flex-row>
+					<h6 style="color:var({item.color})">{item.description.slice(0, 200)}...</h6>
 				</div>
-			</a>
+			</div>
 		</item>
 	{/each}
 </category-flex>
@@ -56,5 +57,10 @@
 		font-size: 2rem;
 		white-space: wrap;
 		margin-bottom: 0;
+	}
+	.a-exclude {
+		width: 100%;
+		height: 100%;
+		box-shadow: none;
 	}
 </style>

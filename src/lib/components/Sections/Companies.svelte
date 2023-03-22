@@ -7,7 +7,7 @@
 <companies-flex {companies} style="--item-width: {collaborationItemWidth}">
 	{#each companies.items as item}
 		<item>
-			<a href={`${item.homepage}`}
+			<a class="a-exclude" href={`${item.homepage}`}
 				><img
 					class="img-override"
 					src={getImageURL(item.collectionId, item.id, item.logo)}
@@ -40,5 +40,10 @@
 		width: 260px;
 		object-fit: cover;
 		height: fit-content;
+	}
+	.a-exclude {
+		width: 100%;
+		height: 100%;
+		box-shadow: none;
 	}
 </style>

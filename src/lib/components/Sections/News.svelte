@@ -9,8 +9,9 @@
 	{#each news.items as item}
 		<item>
 			<div style="padding: 2rem">
-				<h4>{item.title}</h4>
-
+				<flex-row>
+					<a href={`/news/${item.slug}`}><h4>{item.title}</h4></a>
+				</flex-row>
 				<p>{item.description.slice(0, 100)}...</p>
 				<flex-row
 					><a href={`/news/${item.slug}`}>Read more...</a><Time timestamp={item.date} /></flex-row>
@@ -20,6 +21,11 @@
 </news-flex>
 
 <style>
+	.a-exclude {
+		width: 100%;
+		height: 100%;
+		box-shadow: none;
+	}
 	news-flex {
 		padding-bottom: 2.5rem;
 		display: flex;

@@ -5,7 +5,7 @@
 <div>
 	<nav>
 		<ul>
-			<a href="/"><img class="img-override" src={logo} alt="Telesis Logo" /></a>
+			<a class="a-exclude" href="/"><img class="img-override" src={logo} alt="Telesis Logo" /></a>
 		</ul>
 		<ul>
 			<li><a href="/categories">Service</a></li>
@@ -39,5 +39,9 @@
 		color: var(--black-suite);
 		text-decoration: none;
 		font-size: 0.8rem;
+		border-radius: 0;
+	}
+	.a-exclude {
+		box-shadow: none;
 	}
 </style>

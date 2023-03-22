@@ -38,22 +38,28 @@
 		font-family: 'Inter';
 	}
 	:global(h1) {
+		transition: color 0.6s ease-in-out;
 		font-family: 'Urbanist';
 		margin: 0;
 	}
 	:global(h2) {
+		transition: color 0.6s ease-in-out;
 		font-family: 'Urbanist';
 	}
 	:global(h3) {
+		transition: color 0.6s ease-in-out;
 		font-family: 'Urbanist';
 	}
 	:global(h4) {
+		transition: color 0.6s ease-in-out;
 		font-family: 'Urbanist';
 	}
 	:global(h5) {
+		transition: color 0.6s ease-in-out;
 		font-family: 'Urbanist';
 	}
 	:global(h6) {
+		transition: color 0.6s ease-in-out;
 		font-family: 'Urbanist';
 	}
 	background {
@@ -98,9 +104,16 @@
 	}
 
 	:global(a) {
-		color: var(--black-suite);
-		position: relative;
 		text-decoration: none;
+		box-shadow: inset 0 0 0 0 var(--white-cuba);
 		color: inherit;
+		margin: 0 -0.25rem;
+		padding: 0 0.25rem;
+		transition: color 0.6s ease-in-out, box-shadow 0.3s ease-in-out;
+	}
+
+	:global(a:hover) {
+		box-shadow: inset 100vw 0 0 0 var(--white-cuba);
+		color: var(--black-suite);
 	}
 </style>
