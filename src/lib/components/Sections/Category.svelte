@@ -11,7 +11,7 @@
 		<item>
 			<div style="position:relative; border-radius: var(--element-border-radius)">
 				<div
-					style="opacity:.75;border-radius: var(--element-border-radius);z-index:-2;width: 100%; height: 100%; position: absolute; background-color: var(--black-suite);" />
+					style="opacity:.75;border-radius: var(--element-border-radius);z-index:-2;width: 100%; height: 100%; position: absolute; background-color: var(--white-cuba);" />
 				<div
 					style=" background-image: url('{getImageURL(
 						item.collectionId,
