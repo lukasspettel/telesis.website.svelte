@@ -4,7 +4,7 @@
 	import Navbar from '$lib/components/Navbar.svelte'
 	import bgImage from '$lib/assets/images/background/Topographic Map Patterns.svg'
 
-	pbStore.set('https://pocketbase.telesis.at/')
+	pbStore.set(`${import.meta.env.VITE_API_URL}`)
 </script>
 
 <background style="background-image: url('{bgImage}')" />
