@@ -33,11 +33,13 @@
 <content-container>
 	<Record collection="users" id="hm269p75apytq3g" let:record>
 		<hero>
-			<img
-				style="padding-bottom: 2rem; width: 500px;height:fit-content"
-				src={record.logo ? getImageURL(record.collectionId, record.id, record.logo) : '/'}
-				alt={record.title} />
-			<h2 style="white-space: nowrap;">{record.subheadline}</h2>
+			<div>
+				<img
+					style="padding-bottom: 2rem; width: 400px;"
+					src={record.logo ? getImageURL(record.collectionId, record.id, record.logo) : '/'}
+					alt={record.title} />
+				<h2 style="white-space: nowrap;">{record.subheadline}</h2>
+			</div>
 		</hero>
 	</Record>
 
@@ -88,7 +90,6 @@
 		height: 100vh;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 	}
 
 	h1 {
