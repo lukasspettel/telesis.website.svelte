@@ -36,6 +36,7 @@
 	:global(p) {
 		font-size: 1rem;
 		font-family: 'Inter';
+		text-align: justify;
 	}
 	:global(h1) {
 		transition: color 0.6s ease-in-out;
@@ -77,6 +78,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		padding-top:5rem;
 		padding-left: 10rem;
 		padding-right: 10rem;
 	}
@@ -114,6 +116,37 @@
 
 	:global(a:hover) {
 		box-shadow: inset 100vw 0 0 0 var(--white-cuba);
-		color: var(--black-suite);
+	}
+
+
+	@media (min-width: 768px) and (max-width: 1200px) {
+		:global(content-container) {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding-left: 5rem;
+		padding-right: 5rem;
+		}
+	}
+	@media (min-width: 480px) and (max-width: 768px) {
+		:global(content-container) {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding-left: 5rem;
+		padding-right: 5rem;
+		}
+	}
+	@media (max-width: 480px) {
+		:global(content-container) {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
 	}
 </style>

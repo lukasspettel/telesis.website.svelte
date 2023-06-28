@@ -1,4 +1,5 @@
 <script>
+	// @ts-nocheck
 	import Time from 'svelte-time'
 
 	export let news

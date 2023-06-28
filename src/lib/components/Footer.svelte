@@ -31,7 +31,10 @@
 
 <style>
 	img {
-		width: 300px;
+		width: 244px;
+	}
+	flex-row {
+		gap:1rem;
 	}
 	footer {
 		padding-top: 2rem;
@@ -59,5 +62,18 @@
 		width: 100%;
 		height: 100%;
 		box-shadow: none;
+	}
+	@media (max-width: 768px) {
+		footer {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+	img {
+		width: 122px;
+	}
+	}
+	@media (max-width: 480px) {
 	}
 </style>

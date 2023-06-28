@@ -1,4 +1,5 @@
 <script>
+	// @ts-nocheck
 	import { getImageURL } from '$lib/utils/getURL'
 	export let companies
 	export let collaborationItemWidth

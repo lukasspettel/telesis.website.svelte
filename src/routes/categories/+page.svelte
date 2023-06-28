@@ -34,7 +34,7 @@
 		<div>Loading...</div>
 	{:then category}
 		<div style="padding-bottom: 5rem;">
-			<Category {category} {categoryItemWidth} />
+			<Category {category} width={"100%"} subheadline={true} subheadlineCharacters={250} />
 		</div>
 	{/await}
 </content-container>

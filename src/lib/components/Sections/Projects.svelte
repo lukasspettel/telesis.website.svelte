@@ -1,11 +1,12 @@
 <script>
+	// @ts-nocheck
 	import { getImageURL } from '$lib/utils/getURL'
 	import Time from 'svelte-time'
 	export let projects
-	export let projectItemWidth
+	export let width
 </script>
 
-<project-flex {projects} style="--item-width: {projectItemWidth}">
+<project-flex {projects} style="--item-width: {width}">
 	{#each projects.items as item}
 		<item
 			style=" background-color: rgba(255, 255, 255, 0.5); border-left:5px solid var({item.expand
@@ -23,9 +24,9 @@
 						><h4 style="font-size: 1rem; color: var({item.expand.category.color});margin:0rem">
 							{item.expand.category.title}
 						</h4></a>
-					<Time timestamp={item.date} />
-				</flex-row>
 
+				</flex-row>
+				<div class="time"><Time timestamp={item.date}/></div>
 				<flex-row style="gap:2rem">
 					<a class="a-exclude" href={`/projects/${item.slug}`}>
 						<img src={getImageURL(item.collectionId, item.id, item.image)} alt={item.title} /></a>
@@ -47,6 +48,10 @@
 		width: var(--item-width);
 		flex-grow: 1;
 		white-space: wrap;
+	}
+	.time {
+		font-family: 'Urbanist';
+		font-size: 0.8rem;
 	}
 
 	h2 {

@@ -1,31 +1,31 @@
+
 <script>
+	// @ts-nocheck
 	import Time from 'svelte-time'
 	import { getImageURL } from '$lib/utils/getURL'
 
 	export let category
-	export let categoryItemWidth
+	export let width
+	export let subheadline
+	export let subheadlineCharacters
 </script>
 
-<category-flex {category} style="--item-width: {categoryItemWidth}">
+<category-flex {category} style="--item-width: {width}">
 	{#each category.items as item}
 		<item>
-			<div style="position:relative; border-radius: var(--element-border-radius)">
-				<div
-					style="opacity:.75;border-radius: var(--element-border-radius);z-index:-2;width: 100%; height: 100%; position: absolute; background-color: var(--white-cuba);" />
-				<div
-					style=" background-image: url('{getImageURL(
-						item.collectionId,
-						item.id,
-						item.background_image
-					)}')" />
-				<div style="padding: 2.5rem; height:100%;">
+			<card>
+				<div class="height-container">
 					<flex-row>
 						<a href={`/categories/${item.slug}`}>
-							<h1 style="color:var({item.color})">{item.title}</h1></a>
+							<h1 style="color:var({item.color};">{item.title}</h1></a>
 					</flex-row>
-					<h6 style="color:var({item.color})">{item.description.slice(0, 200)}...</h6>
+					{#if subheadline}
+						<h6 style="color:var({item.color})">
+							{item.description.slice(0, subheadlineCharacters)}...
+						</h6>
+					{/if}
 				</div>
-			</div>
+			</card>
 		</item>
 	{/each}
 </category-flex>
@@ -48,19 +48,46 @@
 		border-radius: var(--element-border-radius);
 	}
 
+	category-flex item card {
+		position: relative;
+		border-radius: var(--element-border-radius);
+	}
+
+
+	.height-container {
+		min-height: 250px;
+	}
 	category-flex item p {
 		font-size: 0.9rem;
 		color: var(--black-suite);
 	}
 
 	h1 {
-		font-size: 2rem;
+		font-size: 3rem;
 		white-space: wrap;
 		margin-bottom: 0;
+	}
+	h6 {
+		font-size: 1.25rem;
 	}
 	.a-exclude {
 		width: 100%;
 		height: 100%;
 		box-shadow: none;
+	}
+	@media (min-width: 768px) and (max-width: 1200px) {
+		.height-container {
+			min-height: 100%;
+		}
+	}
+	@media (min-width: 480px) and (max-width: 768px) {
+		.height-container {
+			min-height: 100%;
+		}
+	}
+	@media (max-width: 480px) {
+		.height-container {
+			min-height: 100%;
+		}
 	}
 </style>

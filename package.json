@@ -27,6 +27,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"svelte-icons": "^2.1.0",
+		"svelte-media-queries": "^1.5.4",
 		"svelte-media-query": "^1.1.2",
 		"svelte-time": "^0.7.1"
 	}
