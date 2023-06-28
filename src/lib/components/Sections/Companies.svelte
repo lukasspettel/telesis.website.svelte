@@ -2,10 +2,10 @@
 	// @ts-nocheck
 	import { getImageURL } from '$lib/utils/getURL'
 	export let companies
-	export let collaborationItemWidth
+	export let width
 </script>
 
-<companies-flex {companies} style="--item-width: {collaborationItemWidth}">
+<companies-flex {companies} style="--item-width: {width}">
 	{#each companies.items as item}
 		<item>
 			<a class="a-exclude" href={`${item.homepage}`}

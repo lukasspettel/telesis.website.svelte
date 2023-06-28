@@ -32,7 +32,7 @@
 
 <style>
 	category-flex {
-		padding-bottom: 2.5rem;
+		padding-bottom: 10rem;
 		display: flex;
 		flex-wrap: wrap;
 		grid-gap: 2.5rem;
@@ -63,12 +63,13 @@
 	}
 
 	h1 {
-		font-size: 3rem;
+		font-size: 2.5rem;
 		white-space: wrap;
 		margin-bottom: 0;
 	}
 	h6 {
 		font-size: 1.25rem;
+		text-align: justify;
 	}
 	.a-exclude {
 		width: 100%;

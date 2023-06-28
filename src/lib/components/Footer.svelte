@@ -13,7 +13,7 @@
 		<div>
 			<h6>Navigation</h6>
 			<p><a href="/categories">Services</a></p>
-			<p><a href="/news">News</a></p>
+			<!-- <p><a href="/news">News</a></p> -->
 			<p><a href="/projects">Projects</a></p>
 			<p><a href="/collaborations">Collaboration</a></p>
 			<p><a href="/team">Team</a></p>

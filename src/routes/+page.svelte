@@ -26,7 +26,6 @@
 	})
 	const newsItemWidth = '30%'
 	const projectItemWidth = '100%'
-	const collaborationItemWidth = '10%'
 </script>
 
 <content-container>
@@ -112,7 +111,27 @@
 	{#await projects}
 		<div>loading</div>
 	{:then projects}
-		<Projects {projects} width={"25%"} />
+		<MediaQuery query="(min-width: 1200px)" let:matches>
+			{#if matches}
+			<Projects {projects} width={"25%"} />
+			{/if}
+		</MediaQuery>
+		<MediaQuery query="(min-width: 768px) and (max-width: 1200px)" let:matches>
+			{#if matches}
+			<Projects {projects} width={"45%"} />
+			{/if}
+		</MediaQuery>
+		<MediaQuery query="(min-width: 480px) and (max-width: 768px)" let:matches>
+			{#if matches}
+			<Projects {projects} width={"100%"} />
+			{/if}
+		</MediaQuery>
+		<MediaQuery query="(max-width: 480px)" let:matches>
+			{#if matches}
+			<Projects {projects} width={"100%"} />
+			{/if}
+		</MediaQuery>
+
 	{/await}
 
 	<flex-row style="gap: 1rem;padding-bottom:2rem"
@@ -121,7 +140,7 @@
 	{#await companies}
 		<div>loading</div>
 	{:then companies}
-		<Companies {companies} {collaborationItemWidth} />
+		<Companies {companies} width={"25%"} />
 	{/await}
 </content-container>
 
@@ -145,14 +164,4 @@
 		margin-bottom: 0rem;
 	}
 
-
-	@media (min-width: 768px) and (max-width: 1200px) {
-
-	}
-	@media (min-width: 480px) and (max-width: 768px) {
-
-	}
-	@media (max-width: 480px) {
-
-	}
 </style>

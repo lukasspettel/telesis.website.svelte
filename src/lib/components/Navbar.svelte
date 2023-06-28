@@ -20,7 +20,7 @@
 				</ul>
 				<ul>
 					<li><a href="/categories">Service</a></li>
-					<li><a href="/news">News</a></li>
+					<!-- <li><a href="/news">News</a></li> -->
 					<li><a href="/projects">Projects</a></li>
 					<li><a href="/collaborations">Collaboration</a></li>
 					<li><a href="/team">Team</a></li>
@@ -54,7 +54,7 @@
 							<navigation style="align-items: center;text-align:right">
 								<a href="/"><h1>Home</h1></a>
 								<p><a href="/categories"><h1>Services</h1></a></p>
-								<p><a href="/news"><h1>News</h1></a></p>
+								<!-- <p><a href="/news"><h1>News</h1></a></p> -->
 								<p><a href="/projects"><h1>Projects</h1></a></p>
 								<p><a href="/collaborations"><h1>Collaboration</h1></a></p>
 								<p><a href="/team"><h1>Team</h1></a></p>
@@ -92,7 +92,7 @@
 							<navigation style="align-items: center;text-align:right">
 								<a href="/"><h1>Home</h1></a>
 								<p><a href="/categories"><h1>Services</h1></a></p>
-								<p><a href="/news"><h1>News</h1></a></p>
+								<!-- <p><a href="/news"><h1>News</h1></a></p> -->
 								<p><a href="/projects"><h1>Projects</h1></a></p>
 								<p><a href="/collaborations"><h1>Collaboration</h1></a></p>
 								<p><a href="/team"><h1>Team</h1></a></p>

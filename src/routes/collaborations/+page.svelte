@@ -12,7 +12,6 @@
 		sort: '-created'
 	})
 
-	let collaborationItemWidth = '25%'
 </script>
 
 <content-container>
@@ -31,7 +30,7 @@
 	{#await companies}
 		<div>loading</div>
 	{:then companies}
-		<Companies {companies} {collaborationItemWidth} />
+	<Companies {companies} width={"25%"} />
 	{/await}
 </content-container>
 
@@ -44,5 +43,34 @@
 	flex-row {
 		justify-content: space-between;
 		align-items: flex-end;
+	}
+
+	
+	@media (min-width: 768px) and (max-width: 1200px) {
+		team-flex item {
+			width: 45%;
+			height: 100%;
+		}
+		h1 {
+			font-size: 4rem;
+		}
+	}
+	@media (min-width: 480px) and (max-width: 768px) {
+		team-flex item {
+			width: 100%;
+			height: 100%;
+		}
+		h1 {
+			font-size: 3rem;
+		}
+	}
+	@media (max-width: 480px) {
+		team-flex item {
+			width: 100%;
+			height: 100%;
+		}
+		h1 {
+			font-size: 2rem;
+		}
 	}
 </style>

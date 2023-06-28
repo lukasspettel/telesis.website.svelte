@@ -13,7 +13,6 @@
 		sort: '-created',
 		expand: 'category'
 	})
-	let projectItemWidth = '25%'
 </script>
 
 <content-container>
@@ -40,18 +39,14 @@
 						<team-flex style="padding-top:2rem">
 							{#each item.expand.team as item}
 								<item>
-									<flex-row>
-										<div style="width:150px;height:150px">
-											<img
-												style="object-fit: cover; width: 100%;height: 100%;"
-												src={getImageURL(item.collectionId, item.id, item.image)}
-												alt={item.name} />
-										</div>
-										<div>
-											<h4>{item.name}</h4>
-											<h6>{item.role}</h6>
-										</div>
-									</flex-row>
+									<div style="width:250px;height:250px">
+										<img
+											class="contact-img"
+											src={getImageURL(item.collectionId, item.id, item.image)}
+											alt={item.name} />
+									</div>
+									<h4>{item.name}</h4>
+									<h6>{item.role}</h6>
 								</item>
 							{/each}
 						</team-flex>
@@ -61,7 +56,7 @@
 					<div>Loading...</div>
 				{:then projects}
 					<div style="padding-bottom:2rem; width:100%">
-						<Projects {projects} {projectItemWidth} category={item.title} />
+						<Projects {projects} width={"25%"} category={item.title} />
 					</div>
 				{/await}
 			{/if}
@@ -70,6 +65,13 @@
 </content-container>
 
 <style>
+	.contact-img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+		max-height: 250px;
+		max-width: 250px;
+	}
 	h1 {
 		padding-top: 5rem;
 		font-size: 4rem;
@@ -78,16 +80,13 @@
 	team-flex {
 		display: flex;
 		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
 		gap: 1rem;
 	}
 
 	team-flex item {
-		width: 25%;
-		height: 25%;
-		align-items: flex-start;
-		justify-content: flex-start;
 		white-space: wrap;
-		flex-grow: 1;
 		border-radius: var(--element-border-radius);
 	}
 
@@ -95,5 +94,33 @@
 		align-items: flex-start;
 		justify-content: flex-start;
 		gap: 1rem;
+	}
+
+	@media (min-width: 768px) and (max-width: 1200px) {
+		team-flex item {
+			width: 45%;
+			height: 100%;
+		}
+		h1 {
+			font-size: 4rem;
+		}
+	}
+	@media (min-width: 480px) and (max-width: 768px) {
+		team-flex item {
+			width: 100%;
+			height: 100%;
+		}
+		h1 {
+			font-size: 3rem;
+		}
+	}
+	@media (max-width: 480px) {
+		team-flex item {
+			width: 100%;
+			height: 100%;
+		}
+		h1 {
+			font-size: 2rem;
+		}
 	}
 </style>
