@@ -82,6 +82,7 @@ team         -        team         -      team
 
 
 Pages:
+
 ![image](https://github.com/telesisGmbH/telesis.website.svelte/assets/10091040/5a45d8eb-7306-4fe2-8152-042a2707532f)
 
 The Pages folder in Code contains all the Main Pages of the Website.
