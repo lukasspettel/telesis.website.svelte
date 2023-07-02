@@ -31,16 +31,16 @@ You can preview the production build with `npm run preview`.
 
 ### Svelte
 Each URL is under the src/routes folder.
-The main page is directly under the routes folder with the corresponding files +page.svelte +page.js +layout.svelte
+The main page is directly under the routes folder with the corresponding files +page.svelte +layout.svelte
 
-The Sub pages are under the correspoding folders with the same fileseg. /projects/+page.svelte and +page.js
+The Sub pages are under the correspoding folders with the same fileseg. /projects/+page.svelte 
 
-The dynamically generated routes (if there are any) are saved under a [slug]/+page.svelte +page.js
+The dynamically generated routes (if there are any) are saved under a [slug]/+page.svelte
 
 Resused components are under src/lib
 
 ### JS
-The +page.js folder handles the datafetching from the Pocketbase server (running on Hetzner)
+Data is fetched in the <script> section foer each page. 
 
 The src/lib/utils/getURL.js handels image requests and standadize the URL fetching
 
