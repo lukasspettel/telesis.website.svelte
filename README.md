@@ -59,10 +59,15 @@ The admin interface to the Pocketbase is: https://pocketbase.telesis.at/_/
 Pb-Name              Code-Name          Name-Tag
 
 categories           categories         Services
+
 companies            collaborations     collaborations
+
 news                 news               news          (disabled for now)
+
 pages                src/routes         pagenames     
+
 projects             projects           projects
+
 team                 team               team
 
 
