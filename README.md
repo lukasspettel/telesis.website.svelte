@@ -1,4 +1,4 @@
-# create-svelte
+![image](https://github.com/telesisGmbH/telesis.website.svelte/assets/10091040/d6acc15d-19a8-4492-bf38-95108e448956)# create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
@@ -20,6 +20,8 @@ Once you've created a project and installed dependencies with `npm install` (or 
 
 ```bash
 npm run dev
+![image](https://github.com/telesisGmbH/telesis.website.svelte/assets/10091040/b4164cc6-1737-4e9f-aee0-8efb698696f4)
+
 
 # or start the server and open the app in a new browser tab
 npm run dev -- --open
