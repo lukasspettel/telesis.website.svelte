@@ -15,12 +15,12 @@ npm create svelte@latest my-app
 ```
 
 ## Developing
-
+![image](https://github.com/telesisGmbH/telesis.website.svelte/assets/10091040/b4164cc6-1737-4e9f-aee0-8efb698696f4)
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
 npm run dev
-![image](https://github.com/telesisGmbH/telesis.website.svelte/assets/10091040/b4164cc6-1737-4e9f-aee0-8efb698696f4)
+
 
 
 # or start the server and open the app in a new browser tab
